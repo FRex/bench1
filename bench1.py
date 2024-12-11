@@ -21,7 +21,8 @@ def prettysize(fsize: int) -> str:
 def main():
     """The main function, for performance and to not run on import."""
 
-    # create the temporary file safely and get its name
+    # create the temporary file safely and get its name, we need that because
+    # we cant use stdout or stderr since the command might use them itself
     tmpname = tempfile.NamedTemporaryFile(delete=False).name
 
     # run the command and get time and return code and save output over our temporary file
