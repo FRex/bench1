@@ -3,7 +3,8 @@
 A Python script that runs a command using time, and prints its elapsed real time,
 peak RSS (from time command), and return code, and forwards the return code.
 
-Requires GNU time, not BusyBox one. On Windows msys provides GNU time exe.
+Requires GNU time, not BusyBox one. ~~On Windows msys provides GNU time exe.~~
+**NOTE: On Windows for non-msys programs the max_rss is always 5.3 MiB, this is a bug of some sort and I'll look into it in the future.**
 
 # examples
 
